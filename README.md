@@ -1,10 +1,25 @@
 <div align="center">
 
-# asdf-helix [![Build](https://github.com/CSergienko/asdf-helix/actions/workflows/build.yml/badge.svg)](https://github.com/CSergienko/asdf-helix/actions/workflows/build.yml) [![Lint](https://github.com/CSergienko/asdf-helix/actions/workflows/lint.yml/badge.svg)](https://github.com/CSergienko/asdf-helix/actions/workflows/lint.yml)
+# asdf-evil-helix
 
 [helix](https://helix-editor.com/) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
+
+# Note
+
+I couldn't find a plugin for this version of Helix.
+So I made one.
+I have no experience with ASDF, but I know shell scripts.
+If it works for you, great.
+If it doesn't work for you, or it stops working, well I'm sorry.
+
+Intended usage:
+
+```bash
+mise plugins add --force https://github.com/lwbt/asdf-evil-helix
+mise use -g evil-helix
+```
 
 # Contents
 

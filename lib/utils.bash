@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-GH_REPO="https://github.com/helix-editor/helix"
-TOOL_NAME="helix"
+GH_REPO="https://github.com/usagi-flow/evil-helix"
+TOOL_NAME="evil-helix"
 TOOL_TEST="hx --health"
 
 fail() {
@@ -48,8 +48,12 @@ download_release() {
 	if [ "$architecture" = "arm64" ]; then
 		architecture="aarch64"
 	fi
+
+	if [ "$architecture" = "x86_64" ]; then
+		architecture="amd64"
+	fi
  
-	url="$GH_REPO/releases/download/${version}/helix-${version}-${architecture}-${os}.tar.xz"
+	url="$GH_REPO/releases/download/${version}/evil-helix-${architecture}-${os}.tar.gz"
 
 	echo "* Downloading $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
